@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ambil yang Kamu Butuhkan</title>
+</head>
+<body>
+  <h2>Ambil yang Kamu Butuhkan Hari Ini</h2>
+  <button onclick="redirect('berani')">BERANI</button>
+  <button onclick="redirect('setia')">SETIA</button>
+
+  <script>
+    function redirect(mode) {
+      const berani = ["berani1.html", "berani2.html", "berani3.html", "berani4.html", "berani5.html"];
+      const setia = ["setia1.html", "setia2.html", "setia3.html", "setia4.html", "setia5.html"];
+      const data = { berani, setia };
+      const pilihan = data[mode];
+      const tujuan = pilihan[Math.floor(Math.random() * pilihan.length)];
+      window.location.href = tujuan;
+    }
+  </script>
+</body>
+</html>
